@@ -1,5 +1,5 @@
 
-# Task Management API
+# Todo List API
 
 ---------------------------------------------------------------------------------------
 
@@ -19,14 +19,14 @@ This repository provides an Express.js API for managing tasks. It includes route
 
 ## Overview
 
-The Task Management API offers the following functionalities:
+The Todo List API offers the following functionalities:
 
 ### User Authentication
 
 * Register a new user
 * Log in an existing user
 
-### Task Management
+### Todo List
 
 * Create a new task
 * Update an existing task
@@ -34,7 +34,7 @@ The Task Management API offers the following functionalities:
 * Retrieve a task by ID
 * Retrieve all tasks
 
-All task management operations are protected and require a valid authentication token.
+All Todo List operations are protected and require a valid authentication token.
 
 ## Installation
 
@@ -102,7 +102,7 @@ All task management operations are protected and require a valid authentication 
         * Response: Authentication token 
 
 
-    ### Task Management
+    ### Todo List
 
     * POST api/v1/task/create
 
@@ -156,7 +156,7 @@ All task management operations are protected and require a valid authentication 
 
     ## Authentication
 
-    The API requires an authentication token for all task management operations. Tokens are obtained by logging in with valid credentials. Include a valid token in the Authorization header of your requests:
+    The API requires an authentication token for all Todo List operations. Tokens are obtained by logging in with valid credentials. Include a valid token in the Authorization header of your requests:
 
     ```
     Token: Bearer <your-token>
