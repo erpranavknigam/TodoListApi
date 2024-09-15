@@ -15,15 +15,22 @@ This repository provides an Express.js API for managing tasks. It includes route
 
 ## Overview
 
-The Task Management API provides the following functionalities:
+The Task Management API offers the following functionalities:
+
+### User Authentication
+
+* Register a new user
+* Log in an existing user
+
+### Task Management
 
 * Create a new task
 * Update an existing task
 * Delete a task
 * Retrieve a task by ID
-* Retrieve all tasks (Set Limit and Page)
+* Retrieve all tasks
 
-All operations are protected and require a valid authentication token.
+All task management operations are protected and require a valid authentication token.
 
 ## Installation
 
@@ -59,4 +66,33 @@ All operations are protected and require a valid authentication token.
 
     ## Usage
 
-You can interact with the API using tools like curl, Postman, or by integrating with your frontend application.
+    You can interact with the API using tools like curl, Postman, or by integrating with your frontend application.
+
+    ## API Endpoints
+
+    ### User Authentication
+    
+    * POST api/v1/auth/register
+
+    Description: Register a new user.
+    Request Body:
+    ```
+    {
+      "username": "user",
+      "email": "user@email.com"
+      "password": "password"
+    }
+    ```
+    Response: Success or error message with a token
+
+    * POST api/v1/auth/login
+
+    Description: Log in an existing user.
+    Request Body:
+    ```
+    {
+    "username": "user",
+    "password": "password"
+    }
+    ```
+    Response: Authentication token 
