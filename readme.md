@@ -12,6 +12,7 @@ This repository provides an Express.js API for managing tasks. It includes route
 * [Usage](#usage)
 * [API Endpoints](#api-endpoints)
 * [Authentication](#authentication)
+* [Future Updates](#future-updates)
 
 ## Overview
 
