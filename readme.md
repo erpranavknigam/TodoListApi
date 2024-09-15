@@ -5,6 +5,9 @@
 
 This repository provides an Express.js API for managing tasks. It includes routes for creating, updating, deleting, and retrieving tasks, with authentication required for each operation.
 
+### Project URL
+[![Project Page](https://img.shields.io/badge/Project%20Page-Click%20Here-brightgreen)](https://roadmap.sh/projects/todo-list-api)
+
 ## Table of Contents
 
 * [Overview](#overview)
