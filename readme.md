@@ -7,21 +7,21 @@ This repository provides an Express.js API for managing tasks. It includes route
 
 ## Table of Contents
 
-    * [Overview](#overview)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [API Endpoints](#api-endpoints)
-    * [Authentication](#authentication)
+* [Overview](#overview)
+* [Installation](#installation)
+* [Usage](#usage)
+* [API Endpoints](#api-endpoints)
+* [Authentication](#authentication)
 
 ## Overview
 
 The Task Management API provides the following functionalities:
 
-    * Create a new task
-    * Update an existing task
-    * Delete a task
-    * Retrieve a task by ID
-    * Retrieve all tasks (Set Limit and Page)
+* Create a new task
+* Update an existing task
+* Delete a task
+* Retrieve a task by ID
+* Retrieve all tasks (Set Limit and Page)
 
 All operations are protected and require a valid authentication token.
 
