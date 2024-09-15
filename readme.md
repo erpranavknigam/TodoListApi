@@ -74,25 +74,94 @@ All task management operations are protected and require a valid authentication 
     
     * POST api/v1/auth/register
 
-    Description: Register a new user.
-    Request Body:
-    ```
-    {
-      "username": "user",
-      "email": "user@email.com"
-      "password": "password"
-    }
-    ```
-    Response: Success or error message with a token
+        * Description: Register a new user.
+        * Request Body:
+        ```
+        {
+        "username": "user",
+        "email": "user@email.com"
+        "password": "password"
+        }
+        ```
+        * Response: Success or error message with a token
 
     * POST api/v1/auth/login
 
-    Description: Log in an existing user.
-    Request Body:
+        * Description: Log in an existing user.
+        * Request Body:
+        ```
+        {
+        "email": "apc@email.com",
+        "password": "password"
+        }
+        ```
+        * Response: Authentication token 
+
+
+    ### Task Management
+
+    * POST api/v1/task/create
+
+        * Description: Create a new task.
+        * Request Body:
+        ```
+        {
+        "task": "Task Title",
+        "description": "Task Description"
+        }
+        ```
+        * Authentication: Required
+
+    * PUT api/v1/task/update/:id
+
+        * Description: Update an existing task by ID.
+        * Request Body:
+        ```
+        {
+        "task": "Updated Title",
+        "description": "Updated Description"
+        }
+        ```
+        * URL Parameters:
+            id - The ID of the task to update.
+
+        * Authentication: Required
+
+    * DELETE api/v1/task/delete/:id
+
+        * Description: Delete a task by ID.
+        * URL Parameters:
+            id - The ID of the task to delete.
+
+        * Authentication: Required
+
+    * GET api/v1/task/getById/:id
+
+        * Description: Retrieve a task by ID.
+        * URL Parameters:
+            id - The ID of the task to retrieve.
+        * Authentication: Required
+
+    * GET api/v1/task/getAll?limit=5&page=1
+
+        * Description: Retrieve all tasks.
+        * Query Parameters:
+            * limit - Number of tasks to return per page (default is 10).
+            * page - Page number to retrieve (default is 1).
+        * Authentication: Required
+
+    ## Authentication
+
+    The API requires an authentication token for all task management operations. Tokens are obtained by logging in with valid credentials. Include a valid token in the Authorization header of your requests:
+
     ```
-    {
-    "username": "user",
-    "password": "password"
-    }
+    Token: Bearer <your-token>
     ```
-    Response: Authentication token 
+
+   ## Future Updates
+
+    Following features can be implemented in future updates:
+
+    * Progress Update: Add functionality to update and track the progress of tasks, enabling users to move tasks through various stages of completion.
+    
+    * Search by Progress: Implement a search feature to filter tasks based on their progress status, making it easier for users to view tasks at specific stages.
